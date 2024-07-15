@@ -1,0 +1,210 @@
+{
+  "user": [
+    {
+      "id": "00001",
+      "name": "test",
+      "email": "test@mail.com",
+      "password": "Test@123",
+      "gender": "male",
+      "role": "User",
+      "isActive": true
+    },
+    {
+      "id": "00002",
+      "name": "Tester",
+      "email": "Tester@mail.com",
+      "password": "Tester@123",
+      "gender": "male",
+      "role": "User",
+      "isActive": false
+    },
+    {
+      "id": "00003",
+      "name": "user",
+      "email": "user@mail.com",
+      "password": "User@123",
+      "gender": "male",
+      "role": "User",
+      "isActive": false
+    },
+    {
+      "id": "00004",
+      "name": "manager",
+      "email": "manager@mail.com",
+      "password": "Manager@123",
+      "gender": "male",
+      "role": "Admin",
+      "isActive": true
+    },
+    {
+      "id": "00005",
+      "name": "admin",
+      "email": "admin@mail.com",
+      "password": "Admin@123",
+      "gender": "male",
+      "role": "Admin",
+      "isActive": true
+    },
+    {
+      "id": "00006",
+      "name": "vendor",
+      "email": "vendor@mail.com",
+      "password": "Vendor@123",
+      "gender": "male",
+      "role": "User",
+      "isActive": false
+    },
+    {
+      "id": "00007",
+      "name": "employee",
+      "email": "employee@mail.com",
+      "password": "Employee@123",
+      "gender": "male",
+      "role": "User",
+      "isActive": false
+    },
+    {
+      "id": "00008",
+      "name": "Rahul",
+      "email": "rahul@mail.com",
+      "password": "Rahul@123",
+      "gender": "male",
+      "role": "User",
+      "isActive": false
+    },
+    {
+      "id": "00009",
+      "name": "Willson",
+      "email": "willson@mail.com",
+      "password": "Willson@123",
+      "gender": "male",
+      "role": "Tech",
+      "isActive": true
+    },
+    {
+      "id": "000010",
+      "name": "Mike",
+      "email": "mike@mail.com",
+      "password": "Mike@123",
+      "gender": "male",
+      "role": "Unauthorised",
+      "isActive": true
+    }
+  ],
+  "role": [
+    {
+      "code": "User",
+      "name": "staff"
+    },
+    {
+      "code": "Admin",
+      "name": "quality"
+    },
+    {
+      "code": "Tech",
+      "name": "technician"
+    }
+  ],
+  "menu": [
+    {
+      "menuCode": "user",
+      "name": "User"
+    },
+    {
+      "menuCode": "customer",
+      "name": "Customer"
+    }
+  ],
+  "roleAccess": [
+    {
+      "role": "admin",
+      "menu": "user",
+      "hasEdit": true,
+      "hasAdd": true,
+      "hasDelete": true
+    },
+    {
+      "role": "admin",
+      "menu": "customer",
+      "hasEdit": true,
+      "hasAdd": true,
+      "hasDelete": true
+    },
+    {
+      "role": "user",
+      "menu": "customer",
+      "hasEdit": true,
+      "hasAdd": true,
+      "hasDelete": false
+    },
+    {
+      "role": "tech",
+      "menu": "customer",
+      "hasEdit": false,
+      "hasAdd": true,
+      "hasDelete": false
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "Rahul",
+      "creditLimit": 1000
+    },
+    {
+      "id": 2,
+      "name": "Rachin",
+      "creditLimit": 2000
+    },
+    {
+      "name": "Vinay Kumar",
+      "creditLimit": 1500,
+      "id": "8084"
+    },
+    {
+      "id": "2ffc",
+      "name": "Jason",
+      "creditLimit": 3000
+    },
+    {
+      "id": "5e66",
+      "name": "Brad",
+      "creditLimit": 4000
+    },
+    {
+      "name": "Bob",
+      "creditLimit": 7000,
+      "id": "754e"
+    },
+    {
+      "id": "cf7e",
+      "name": "Maxi",
+      "creditLimit": 5000
+    },
+    {
+      "id": "2664",
+      "name": "skjdh",
+      "creditLimit": 7345
+    },
+    {
+      "id": "7fda",
+      "name": "jstjeh",
+      "creditLimit": 23423
+    },
+    {
+      "id": "f5d2",
+      "name": "dkhlsfds",
+      "creditLimit": 8745
+    },
+    {
+      "id": "dc15",
+      "name": "kjshfdkjdshf",
+      "creditLimit": 76387462
+    },
+    {
+      "id": "76ef",
+      "name": "dsjkhgklsdjg",
+      "creditLimit": 48393785
+    }
+  ]
+}
