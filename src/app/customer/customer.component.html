@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col-lg-12">
+            <form class="example-form" [formGroup]="customerForm" (ngSubmit)="editCustomer == true ? updateCustomer() : addCustomer()">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Customer Name</mat-label>
+                  <input matInput placeholder="name" formControlName="name" type="text">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Credit Limit</mat-label>
+                    <input matInput placeholder="credit limit" formControlName="creditLimit" type="number">
+                </mat-form-field>
+                <section>
+                    <div class="example-button-row">
+                      <button mat-raised-button color="primary">{{editCustomer == true ? 'Update' : 'Add' }}</button>
+                    </div>
+                </section>
+            </form>
+    </div>
+</div>
+
+
+<mat-card class="example-card p-4">
+    <div class="row">
+        <mat-card-header class="d-flex justify-content-center">
+            <h1>Customers List</h1>
+            <!-- <a
+            mat-raised-button
+            (click)="addCustomer()"
+            color="primary"
+            class="float-right"
+            >Add</a
+          > -->
+        </mat-card-header>
+        <mat-card-content>
+            <div class="mat-elevation-z8" style="max-width: 1200px !important">
+                <table mat-table matSort [dataSource]="dataSource">
+                  <!-- Id Column -->
+                  <ng-container matColumnDef="id">
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>Sl No.</th>
+                    <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+                  </ng-container>
+              
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>Name</th>
+                    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+                  </ng-container>
+              
+                  <!-- Email Column -->
+                  <ng-container matColumnDef="creditLimit">
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>Credit Limit</th>
+                    <td mat-cell *matCellDef="let element">{{ element.creditLimit }}</td>
+                  </ng-container>
+              
+                  <!-- Action Column -->
+                  <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                    <td mat-cell *matCellDef="let element">
+                      <a
+                        mat-raised-button
+                        (click)="onEditCustomer(element)"
+                        color="primary"
+                        >Edit</a
+                      >
+                      <a
+                        mat-raised-button
+                        (click)="deleteCustomer(element.id)"
+                        color="accent"
+                        >Delete</a
+                      >
+                    </td>
+                  </ng-container>
+              
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                </table>
+              
+                <mat-paginator
+                  [pageSizeOptions]="[5, 10, 20]"
+                  showFirstLastButtons
+                  aria-label="Select page of periodic elements"
+                >
+                </mat-paginator>
+              </div>
+        </mat-card-content>
+    </div>
+</mat-card>
